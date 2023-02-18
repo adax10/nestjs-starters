@@ -1,4 +1,4 @@
-# NestJS starter with TypeORM (0.3) and database MariaDB
+## NestJS starter with TypeORM (0.3) and database MariaDB
 
 ## Installation
 
