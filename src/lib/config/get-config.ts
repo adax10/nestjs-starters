@@ -1,7 +1,7 @@
 import { plainToInstance } from 'class-transformer';
 import { typeORMConfig } from 'database';
-import { basicConfig } from './basic-config';
 import { EnvironmentVariables } from './environment.variables';
+import { basicConfig } from './basic-config';
 
 export const getConfig = () => {
   const configEnvs = plainToInstance(EnvironmentVariables, process.env, { enableImplicitConversion: true });
