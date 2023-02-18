@@ -1,7 +1,8 @@
 import { TypeOrmModuleOptions } from '@nestjs/typeorm';
 import { EnvironmentVariables, TimeIntervalMs } from 'lib/config';
 import { toBoolean } from 'lib/utils';
-import * as Migrations from './migrations';
+// uncomment after adding migration
+// import * as Migrations from './migrations';
 import * as Entities from './entities';
 
 export const typeORMConfig = (configEnvs: EnvironmentVariables): TypeOrmModuleOptions => ({
@@ -12,7 +13,7 @@ export const typeORMConfig = (configEnvs: EnvironmentVariables): TypeOrmModuleOp
   password: configEnvs.TYPEORM_PASSWORD,
   database: configEnvs.TYPEORM_DATABASE,
   entities: Object.values(Entities),
-  migrations: Object.values(Migrations),
+  // migrations: Object.values(Migrations),
   migrationsRun: true,
   autoLoadEntities: true,
   logging: toBoolean(configEnvs.TYPEORM_LOGGING),
