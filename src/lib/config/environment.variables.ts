@@ -75,4 +75,13 @@ export class EnvironmentVariables {
   @Type(() => String)
   @IsString()
   readonly TYPEORM_DEBUG: string = 'false';
+
+  @IsString()
+  readonly REDIS_HOST: string = 'localhost';
+
+  @IsInt()
+  readonly REDIS_PORT: number = 6379;
+
+  @IsString()
+  readonly REDIS_PREFIX: string = `${NodeEnv.Development}_`;
 }

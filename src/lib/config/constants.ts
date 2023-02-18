@@ -16,3 +16,7 @@ export enum TimeIntervalS {
   Hour = TimeIntervalS.Minute * 60,
   Day = TimeIntervalS.Hour * 24
 }
+
+export enum CacheKeys {
+  ExampleKey = 'example-key'
+}

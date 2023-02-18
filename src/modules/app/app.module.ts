@@ -4,6 +4,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { ThrottlerGuard, ThrottlerModule } from '@nestjs/throttler';
 import { ConfigModule } from '@nestjs/config';
 import { getConfig, envValidation } from 'lib/config';
+import { RedisModule } from 'modules/redis';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 
@@ -20,7 +21,8 @@ import { AppService } from './app.service';
     TypeOrmModule.forRootAsync({
       useFactory: async () => getConfig().typeORMConfig
     }),
-    ThrottlerModule.forRoot(getConfig().basicConfig.throttlerConfig)
+    ThrottlerModule.forRoot(getConfig().basicConfig.throttlerConfig),
+    RedisModule.register(getConfig().redisConfig)
   ],
   controllers: [AppController],
   providers: [
