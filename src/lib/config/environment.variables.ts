@@ -10,7 +10,7 @@ export class EnvironmentVariables {
 
   @IsOptional()
   @IsNumber()
-  readonly API_PORT: number = 3005;
+  readonly API_PORT: number = 3000;
 
   @IsOptional()
   @IsString()
