@@ -18,7 +18,8 @@
     "noImplicitAny": true,
     "noImplicitThis": true,
     "noUnusedLocals": false,
-    "incremental": true
+    "incremental": true,
+    "jsx": "react"
   },
   "exclude": ["node_modules", "dist"]
 }

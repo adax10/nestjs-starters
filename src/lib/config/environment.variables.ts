@@ -75,4 +75,16 @@ export class EnvironmentVariables {
   @Type(() => String)
   @IsString()
   readonly TYPEORM_DEBUG: string = 'false';
+
+  @IsString()
+  readonly EMAIL_SERVICE: string = 'gmail';
+
+  @IsString()
+  readonly EMAIL_HOST: string = 'smtp.gmail.com';
+
+  @IsString()
+  readonly EMAIL_USER: string;
+
+  @IsString()
+  readonly EMAIL_PASSWORD: string;
 }

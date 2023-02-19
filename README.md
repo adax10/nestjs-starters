@@ -1,4 +1,4 @@
-## NestJS starter with TypeORM (0.3) and database MariaDB
+## NestJS starter with TypeORM (0.3), database MariaDB and Nodemailer
 
 ## Installation
 
@@ -102,4 +102,12 @@ TYPEORM_PORT=3306 (required number)
 TYPEORM_SYNCHRONIZE=false (optional boolean, default false)
 TYPEORM_LOGGING=true (optional boolean, default false)
 TYPEORM_DEBUG=false (optional boolean, default false)
+```
+
+```
+# nodemailer
+EMAIL_SERVICE=string (required string)
+EMAIL_HOST=string (required string)
+EMAIL_USER=string (required string)
+EMAIL_PASSWORD=string (required string)
 ```
