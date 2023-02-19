@@ -75,4 +75,16 @@ export class EnvironmentVariables {
   @Type(() => String)
   @IsString()
   readonly TYPEORM_DEBUG: string = 'false';
+
+  @IsOptional()
+  @IsString()
+  readonly TYPEORM_MIGRATIONS?: string;
+
+  @IsOptional()
+  @IsString()
+  readonly TYPEORM_MIGRATIONS_DIR?: string;
+
+  @IsOptional()
+  @IsString()
+  readonly TYPEORM_ENTITIES?: string;
 }

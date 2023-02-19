@@ -1,4 +1,4 @@
-## NestJS starter with TypeORM (0.3) and database MariaDB
+## NestJS starter with TypeORM (0.2) and database MariaDB
 
 ## Installation
 
@@ -40,17 +40,13 @@ $ npm run test:cov
 
 ## Migrations
 
-Make sure to use npm for commands follow, because yarn does not support $npm_config_name.
-
 ```
 # generate migration
-npm run migration:generate --name=ExampleMigration
+yarn typeorm migration:generate -n ExampleMigration
 
 # create migration
-npm run migration:create --name=ExampleMigration
+yarn typeorm migration:create -n ExampleMigration
 ```
-
-Migration files are placed under src/database/migrations.
 
 ## Env configuration
 
@@ -102,4 +98,7 @@ TYPEORM_PORT=3306 (required number)
 TYPEORM_SYNCHRONIZE=false (optional boolean, default false)
 TYPEORM_LOGGING=true (optional boolean, default false)
 TYPEORM_DEBUG=false (optional boolean, default false)
+TYPEORM_MIGRATIONS=dist/migrations/*.js (optional, value for migration scripts)
+TYPEORM_MIGRATIONS_DIR=src/migrations (optional, only for local development)
+TYPEORM_ENTITIES=dist/lib/entities/*.entity.js (optional, only for migrations)
 ```
