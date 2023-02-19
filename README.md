@@ -11,7 +11,7 @@ $ npm install
 or using yarn
 
 ```bash
-$ yarn install
+$ yarn
 ```
 
 ## Running the app
