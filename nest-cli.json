@@ -11,6 +11,7 @@
           "dtoFileNameSuffix": [".dto.ts", ".response.ts", ".model.ts"]
         }
       }
-    ]
+    ],
+    "assets": [{ "include": "i18n/**/*", "watchAssets": true }]
   }
 }

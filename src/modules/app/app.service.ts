@@ -17,8 +17,4 @@ export class AppService implements OnApplicationBootstrap, OnApplicationShutdown
 
     process.exit(0);
   }
-
-  getHello() {
-    return 'Hello world!';
-  }
 }
